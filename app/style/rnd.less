@@ -1,0 +1,257 @@
+// EHC RND Special styles
+
+// Import Desired Google Font
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+@border: 1px solid #bbbab9;
+// Type
+//------------------------------
+h1 {}
+h2 {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 300;
+	margin: 20px 0;
+}
+
+h3 {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+	line-height: 18px;
+}
+
+h4 {}
+h5 {}
+h6 {}
+
+p {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 25px;
+	color: #7d787e;
+}
+
+// Atributes
+//------------------------------
+.pop { color: #ed8840; }
+
+// Social icons
+.rnd-icon-twitter   { background: url('/img/icon-twitter.png'); }
+.rnd-icon-behance   { background: url('/img/icon-behance.png'); }
+.rnd-icon-instagram { background: url('/img/icon-instagram.png'); }
+
+// Blog
+#rnd-blog #rnd-hero {
+	padding: 0;
+	background: #999999 url('/img/rnd-mountain.png') no-repeat right 20%;
+}
+
+// Blog content and listing
+#rnd-blog-content { padding: 0 0 2em 0; }
+
+#rnd-blog-content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#rnd-blog-content li {
+	list-style: none;
+	border-bottom: 1px solid #e7e7e7;
+	margin: 2em 0;
+	&:last-child { border: none; }
+}
+
+#rnd-blog-content li a {
+	font-size: 21px;
+	color: #666;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin: 20px 0;
+}
+
+#rnd-blog-content li p {
+	margin: 0.5em 0 2em 0;
+}
+
+// Blog post page (detail)
+#rnd-blog-posts { padding: 0 0 2em 0; }
+
+// Footer
+footer .footer-social { text-align: center; }
+footer .footer-social li { display: inline; }
+footer .footer-social a {
+	display: inline-block;
+	margin: 0 5px; 
+	height: 25px;
+	width: 25px;
+	background-size: cover;
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+// Team section
+//------------------------------
+#rnd-team {
+	background: #F1F1F1;
+	padding: 4em 0 2em;
+	text-align: center;
+	border-top: @border;
+	
+	p { color:#9A9A9A; }
+	
+	h3 {
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 600;
+		line-height: 18px;
+	}
+	
+	
+	// Main description
+	.rnd-team-desc {
+		margin: 0 auto 5em;
+		float: none;
+	}
+	
+	
+	.rnd-team-bubble {
+		margin: 2em 0;
+	}
+	// Bubble pictures
+	.rnd-team-bubbles img {
+		width: 75%;
+	}
+}
+
+
+// Skillz section
+//------------------------------
+#rnd-skillz {
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 4em 0;
+	border-top: @border;
+}
+
+#rnd-skillz h3 { margin: 20px 0; }
+
+.rnd-skillz-chunk { padding-bottom: 3em; }
+
+
+// Mission section
+//------------------------------
+#rnd-mission {
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 4em 0;
+}
+
+
+.rnd-mission-statement {
+	border-bottom: 1px solid #bbbab9;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+	
+#rnd-mission-img {
+	position: absolute;
+	top: -6em;
+	width: 100%;
+	max-width: 960px;
+}
+
+.rnd-mission-quote {
+	img {
+		float: left;
+		margin-right: 20px;
+	}
+	p {
+		font-style: italic;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 980px) {
+	#rnd-mission { padding: 1em 0 3em; }
+	#rnd-mission-img { display: none; }
+	#rnd-mission h2, #rnd-mission p { text-align: center; }
+	
+	.rnd-mission-quote img {
+		display: block;
+		float: none;
+		width: 100px;
+		margin: 0 auto 2em;
+	}
+	
+}
+
+// Hero section
+//------------------------------
+#rnd-hero {
+	padding: 0 0 2em;
+	background: #999 url('/img/rnd-mountain.png') no-repeat right -30%;
+}
+
+.rnd-tagline {
+	text-align: center;
+	color: white;
+	padding: 4em 0 11em;
+	
+	h1 {
+		font-size: 79px;
+		font-weight: 100;
+		letter-spacing: 2px;
+	}
+	
+	p {
+		font-size: 13px;
+		font-weight: 100;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin: 0;
+		color: white;
+	}
+}
+
+@media (max-width: 480px) {
+	.rnd-tagline { padding: 3em 0 9em; }
+	.rnd-tagline h1 { font-size: 38px; }
+}
+
+.dropdown-menu {
+	font-size: 13px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0;
+	color: white;
+	border: none;
+	padding: 10px 0;
+}
+
+.dropdown-menu>li>a {
+	padding: 10px 20px;
+	color: #d5d5d5;
+	
+	&:hover {
+		color: white;
+		text-decoration: underline;
+	}
+}
+
+// Footer
+//------------------------------
+footer {
+	position: relative;
+	background: #000;
+	padding: 2em 0;
+}
