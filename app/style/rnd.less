@@ -1,9 +1,73 @@
 // EHC RND Special styles
 
-// Import Desired Google Font
+// Import Google font
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
-@border: 1px solid #bbbab9;
+// Variables
+@rnd-border: 1px solid #bbbab9;
+
+// Mask overlay
+.rnd-mask { background: rgba(0,0,0,.2); }
+
+
+
+//
+// Hero section
+//
+#rnd-hero {
+	background: #999 url('/img/rnd-hero-bg.jpg') no-repeat 0 20%;
+	background-size: cover;
+}
+
+// Main hero tagline (Mobile first)
+.rnd-tagline-holder {
+	width: 100%;
+	h1 { margin: 0; }
+}
+
+@media (min-width: @screen-md-min) {
+	.rnd-tagline-holder {
+		width: 700px;
+		margin: 0 auto;
+	}
+	.rnd-tagline-wrapper {
+		margin-top: 0;
+		padding: 60px 0 300px;
+	}
+}
+
+// Media query for tagline enlargment
+@media (min-width: @screen-sm-min) {
+	.rnd-tagline {
+		color: white;
+		font-size: 79px;
+		font-weight: 100;
+		letter-spacing: 2px;
+	}
+	
+}
+
+.rnd-tagline-subtext {
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin-left: 5px;
+}
+
+//
+// Navigation
+//
+// Brand image
+.navbar-brand {
+	position: absolute;
+	top: 0;
+	
+	// Logo image
+	.rnd-logo { max-width: 150px; }
+}
+
+
 // Type
 //------------------------------
 h1 {}
@@ -41,6 +105,9 @@ p {
 .rnd-icon-twitter   { background: url('/img/icon-twitter.png'); }
 .rnd-icon-behance   { background: url('/img/icon-behance.png'); }
 .rnd-icon-instagram { background: url('/img/icon-instagram.png'); }
+
+
+
 
 // Blog
 #rnd-blog #rnd-hero {
@@ -99,7 +166,7 @@ footer .footer-social a {
 	background: #F1F1F1;
 	padding: 4em 0 2em;
 	text-align: center;
-	border-top: @border;
+	border-top: @rnd-border;
 	
 	p { color:#9A9A9A; }
 	
@@ -137,7 +204,7 @@ footer .footer-social a {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	padding: 4em 0;
-	border-top: @border;
+	border-top: rnd-border;
 }
 
 #rnd-skillz h3 { margin: 20px 0; }
@@ -192,39 +259,6 @@ footer .footer-social a {
 		margin: 0 auto 2em;
 	}
 	
-}
-
-// Hero section
-//------------------------------
-#rnd-hero {
-	padding: 0 0 2em;
-	background: #999 url('/img/rnd-mountain.png') no-repeat right -30%;
-}
-
-.rnd-tagline {
-	text-align: center;
-	color: white;
-	padding: 4em 0 11em;
-	
-	h1 {
-		font-size: 79px;
-		font-weight: 100;
-		letter-spacing: 2px;
-	}
-	
-	p {
-		font-size: 13px;
-		font-weight: 100;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		margin: 0;
-		color: white;
-	}
-}
-
-@media (max-width: 480px) {
-	.rnd-tagline { padding: 3em 0 9em; }
-	.rnd-tagline h1 { font-size: 38px; }
 }
 
 .dropdown-menu {
