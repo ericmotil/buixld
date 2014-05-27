@@ -5,7 +5,7 @@
 
 // Variables
 @rnd-border: 1px solid #bbbab9;
-
+@brand-primary: #1AA6CC;
 // Mask overlay
 .rnd-mask { background: rgba(0,0,0,.2); }
 
@@ -15,9 +15,26 @@
 // Hero section
 //
 #rnd-hero {
-	background: #999 url('/img/rnd-hero-bg.jpg') no-repeat 0 20%;
-	background-size: cover;
+	position: relative;
+	background: #154866;
+	background: radial-gradient(circle farthest-side at right bottom,#fff 8%,#154866 70%,#000);
+	overflow: hidden;
 }
+
+.thingy {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	right: 0;
+}
+
+.thingy img {
+	max-width: 1024px;
+	margin-left: 480px;
+	margin-top: 120px;
+}
+
 
 // Main hero tagline (Mobile first)
 .rnd-tagline-holder {
@@ -27,12 +44,11 @@
 
 @media (min-width: @screen-md-min) {
 	.rnd-tagline-holder {
-		width: 700px;
 		margin: 0 auto;
 	}
 	.rnd-tagline-wrapper {
 		margin-top: 0;
-		padding: 60px 0 300px;
+		padding: 30px 0 170px;
 	}
 }
 
@@ -40,9 +56,8 @@
 @media (min-width: @screen-sm-min) {
 	.rnd-tagline {
 		color: white;
-		font-size: 79px;
+		font-size: 48px;
 		font-weight: 100;
-		letter-spacing: 2px;
 	}
 	
 }
@@ -54,6 +69,51 @@
 	letter-spacing: 2px;
 	margin-left: 5px;
 }
+
+
+//
+// Hero more info
+.rnd-hero-more-info {
+	
+	max-width: 570px;
+	margin-top: 20px;
+	
+	p {
+		font-weight: 100;
+		color: white;
+		font-size: 24px;
+		line-height: 38px;
+		
+		&.smaller {
+			font-size: 14px;
+			line-height: 28px;
+			max-width: 433px;
+		}
+	}
+}
+
+
+//
+// Make it matter band
+.make-it {
+	background: @brand-primary;
+	padding: 50px 0;
+	color: white;
+	z-index: 1;
+}
+.whatever {
+	font-size: 36px;
+	margin: 0 5px;
+}
+
+.matter {
+	font-size: 30px;
+	margin: 0 5px;
+	font-family: "Lato", Helvetica, sans-serif;
+	font-weight: 100;
+}
+
+
 
 //
 // Navigation
@@ -67,7 +127,10 @@
 	.rnd-logo { max-width: 150px; }
 }
 
-
+.navbar-nav > li > a {
+	text-transform: initial;
+	font-size: 14px;
+}
 // Type
 //------------------------------
 h1 {}
